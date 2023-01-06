@@ -91,6 +91,6 @@ Finally, some samples of louder audio files are *naively* mixed by editing *samp
 snare_samp.volume.value = -3;
 ```
 ## License
-The software is distributed under the [GPLv3 license](LICENSE.md). 
+The software is distributed under the [GNU General Public License v3.0](LICENSE.md). 
 
 ![GPLv3Logo](https://www.gnu.org/graphics/gplv3-127x51.png)
