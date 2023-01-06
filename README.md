@@ -1,5 +1,5 @@
 # Yuri's GameOfMusic
-Automatic Web Music generator based on Conway's Game of Life
+Automatic Web Music generator based on Conway's Game of Life.
 
 https://www.yuribrandi.com/
 
