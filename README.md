@@ -64,7 +64,7 @@ The instruments are made with **Tone.Sampler**, which given some audio files pla
 *An example:*
 
 ``` JavaScript
-export const violin_samp = new Tone.Sampler({
+violin_samp = new Tone.Sampler({
     urls: {
         "A3": "A3.ogg",
         "G4": "G4.ogg",
@@ -79,7 +79,7 @@ export const violin_samp = new Tone.Sampler({
 
 For percussive instruments things are even simpler, since only one note is needed:
 ``` JavaScript
-export const snare_samp = new Tone.Sampler({
+snare_samp = new Tone.Sampler({
     urls: {
         "C2": "snare.wav",
     },
