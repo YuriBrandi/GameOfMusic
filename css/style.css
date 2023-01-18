@@ -1,0 +1,276 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(0deg, #141E30, #243B55);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+h1 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+table {
+    width: auto;
+    border-spacing: 1px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    /*display: inline-block;*/
+}
+
+th, td {
+    padding: 15px;
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+    text-align: center;
+}
+
+thead th{
+    background-color: #55608f;
+}
+
+.music_tab td {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.music_tab td:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+td.selected{
+    background-color: white;
+    color: black;
+}
+
+td.selected:hover{
+    background-color: rgba(255,255,255,0.8);
+}
+
+td.locked{
+    background-color: #FFD700;
+}
+
+td.playing {
+    background-color: red;
+}
+
+td.playing:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+td.playing i{
+    background-color: transparent;
+}
+
+td.selected.muted {
+    background-color: dimgrey;
+}
+
+td.selected.muted.playing{
+    background-color: red;
+}
+
+td.selected td.locked t:hover {
+}
+
+footer{
+    color: white;
+    position: absolute;
+    text-align: right;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;
+    /*background-color: #243B55;*/
+}
+
+
+footer a{
+    color: white;
+}
+
+#toolbar{
+    /*width: 100%;*/
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+
+}
+
+div.bar-item{
+    padding: .5rem;
+    display: inline-block;
+    text-align: center;
+}
+
+div.bar-item i{
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#side-bar_shower {
+    display: none;
+}
+
+div.bar-item i:hover, #side-bar td i:hover{
+    color: #cccccc;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+}
+
+#add_col, #rem_col{
+    background-color: white;
+    color: #555555;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+}
+
+input[name = "bpm_val"]{
+    width: 3.5rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+select{
+    font-size: 1rem;
+}
+
+#side-bar {
+    width: 100%;
+}
+
+#side-bar td{
+    min-width: 1.5rem;
+    height: 1.5rem;
+    width: auto;
+    position: relative;
+}
+
+#side-bar td i{
+    background-color: transparent;
+}
+
+#side-bar td i:first-child{
+    cursor: pointer;
+    padding-right: 1.8rem;
+}
+
+#side-bar #reload{
+    cursor: pointer;
+    padding-right: .6rem;
+}
+
+#side-bar #reload + i{
+    cursor: pointer;
+    padding-right: .6rem;
+}
+
+#side-bar td p{
+    text-transform: uppercase;
+    font-size: .6rem;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+
+#side-bar select{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+#side-bar p select {
+    font-size: .7rem;
+}
+
+#side-bar .mel-row{
+    height: 13.7rem;
+}
+
+
+@media only screen and (max-width: 1400px) {
+
+    div.bar-item i{
+        font-size: 1.2rem;
+    }
+    div.bar-item p{
+        font-size: .8rem;
+    }
+    div.bar-item select {
+        font-size: .9rem;
+    }
+    input[name = "bpm_val"]{
+        width: 3rem;
+        font-size: .9rem
+    }
+    #add_col, #rem_col{
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+    #side-bar .ch-row td i {
+        font-size: .8rem;
+    }
+
+
+    #side-bar .ch-row td select {
+        font-size: .7rem;
+    }
+
+    #side-bar .ch-row td p {
+        font-size: .5rem;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+
+    .side-bar-col {
+        display: none;
+    }
+
+    #side-bar_shower {
+        display: inline-block;
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    h1 {
+        display: none;
+    }
+
+    .music_tab td {
+        font-size: .7rem;
+        padding: 10px;
+    }
+
+}
+

@@ -1,0 +1,176 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <title>Yuri's Game of Music</title>
+    <link rel="icon" type="image/png" href="https://www.yuribrandi.com/spazio/images/icona.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+</head>
+<body>
+<!--<h1>YGoM</h1>-->
+<div class="container">
+    <div class="row justify-content-center ">
+        <div class="col-lg-2 justify-content-center side-bar-col">
+            <table id="side-bar">
+                <tr class="mel-row">
+                    <td id="row_0_1_2_3">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <select id="mel_instr">
+                            <option value="sax">🎷</option>
+                            <option value="elec_guit" selected>🎸</option>
+                            <option value="bass">Bass</option>
+                            <option value="violin">🎻</option>
+                        </select>
+                        <p>melody</p>
+                    </td>
+                </tr>
+                <tr class="ch-row">
+                    <td id="row_4">
+                        <i id="reload" class="fa-solid fa-dice"></i>
+                        <i class="fa-solid fa-volume-high"></i>
+
+                        <select id="chord_instr">
+                            <option value="piano" selected>🎹</option>
+                            <option value="casio">E-🎹</option>
+                        </select>
+                        <p>
+                            chords
+                            <select id="n_chords_sel">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4" selected>4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="row_5">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <i class="fa-solid fa-drum"></i>
+                        <p>clap</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="row_6">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <i class="fa-solid fa-drum"></i>
+                        <p>hi-hat</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="row_7">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <i class="fa-solid fa-drum"></i>
+                        <p>conga</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="row_8">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <i class="fa-solid fa-drum"></i>
+                        <p>snare</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="row_9">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <i class="fa-solid fa-drum"></i>
+                        <p>kick</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-auto">
+            <table>
+                <tbody class="music_tab" ondragstart="return false;" ondrop="return false;"></tbody>
+            </table>
+        </div>
+    </div>
+    </br>
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div id="toolbar">
+                <div class="bar-item">
+                    <i id="play_pause" class="fa-solid fa-play"></i>
+                    <p>Play</p>
+                </div>
+                <div class="bar-item">
+                    <i id="stop_music" class="fa-solid fa-stop"></i>
+                    <p>Stop</p>
+                </div>
+                <div class="bar-item">
+                    <i id="reset_tab" class="fa-solid fa-broom"></i>
+                    <p>Clear</p>
+                </div>
+                <div class="bar-item">
+                    <i id="lock_gen" class="fa-solid fa-lock"></i>
+                    <p>Lock Gen</p>
+                </div>
+                <div class="bar-item">
+                    <i id="next_gen" class="fa-solid fa-forward"></i>
+                    <p>Next Gen</p>
+                </div>
+                <div class="bar-item">
+                    <i id="debug" class="fa-solid fa-bug"></i>
+                    <p>Debug</p>
+                </div>
+                <div class="bar-item">
+                    <input type="number" name="bpm_val" value="110" min="20" max="9999" onkeydown="return false">
+                    <p>BPM</p>
+                </div>
+                <div id="key_pitch" class="bar-item">
+                    <select>
+                        <option value="a">A</option>
+                        <option value="a#">A#</option>
+                        <option value="b" selected>B</option>
+                        <option value="c">C</option>
+                        <option value="c">C#</option>
+                        <option value="d">D</option>
+                        <option value="d#">D#</option>
+                        <option value="e">E</option>
+                        <option value="f">F</option>
+                        <option value="f#">F#</option>
+                        <option value="g">G</option>
+                        <option value="g#">G#</option>
+                    </select>
+                    <select>
+                        <option value="min" selected>Min</option>
+                        <option value="maj">Maj</option>
+                    </select>
+                    <p>Key</p>
+                </div>
+                <div id="side-bar_shower" class="bar-item">
+                    <i  class="fa-solid fa-bars-staggered"></i>
+                    <p>Music Bar</p>
+                </div>
+                <div class="bar-item">
+                    <i id="rem_col" class="fa-solid fa-minus"></i>
+                    <i id="add_col" class="fa-solid fa-plus"></i>
+                    <p>Col.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer>
+    <p>&copy; Yuri Brandi, 2023. Under GPLv3. <a href="https://github.com/YuriBrandi/GameOfMusic">Check out on GitHub</a> <i class="fa-brands fa-github"></i> &nbsp; </p>
+</footer>
+
+<link rel="stylesheet"
+      href="./css/style.css"
+      type="text/css"/>
+<link rel="stylesheet"
+      href="./css/bootstrap-grid.min.css"
+      type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="./js/Tone.js"></script>
+<script type="module" src="js/music_samples.js"></script>
+<script type="module" src="js/music_utils.js"></script>
+<script type="module" src="./js/script.js"></script>
+<script src="https://kit.fontawesome.com/8220ba4e68.js" crossorigin="anonymous"></script>
+</body>
+</html>
